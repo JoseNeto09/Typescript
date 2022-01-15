@@ -1,7 +1,7 @@
 export class Negociacao {
-    constructor(data, quatidade, valor) {
+    constructor(data, quantidade, valor) {
         this._data = data;
-        this._quantidade = quatidade;
+        this._quantidade = quantidade;
         this._valor = valor;
     }
     get data() {
@@ -12,5 +12,8 @@ export class Negociacao {
     }
     get valor() {
         return this._valor;
+    }
+    get volume() {
+        return this._quantidade * this._valor;
     }
 }
